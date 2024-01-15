@@ -6,6 +6,7 @@ from models.habitat import habitats
 from schemas.animal import Animal
 from typing import List
 from starlette.status import HTTP_204_NO_CONTENT
+from sqlalchemy import func, select
 from cryptography.fernet import Fernet
 
 animal = APIRouter()
