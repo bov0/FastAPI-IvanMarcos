@@ -11,7 +11,7 @@ animales = Table(
     Column("edad", Integer),
     Column("id_especie", Integer, ForeignKey('especies.id_especie'), nullable=False),
     Column("imagen", BLOB),
-    Column("id_habitat", Integer, ForeignKey('habitats.id_habitat')),
+    Column("id_habitat", Integer, ForeignKey('habitats.id_habitat'), nullable=False),
 )
 
 meta.create_all(bind=engine,tables=[animales])
